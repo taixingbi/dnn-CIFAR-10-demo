@@ -4,8 +4,8 @@
 ssh -i  "demo.pem" ubuntu@ec2-100-27-3-212.compute-1.amazonaws.com
 ssh -L localhost:8888:localhost:8888 -i "demo.pem" ubuntu@ec2-100-27-3-212.compute-1.amazonaws.com
 #gpu
-ssh -i  "demo.pem" ubuntu@ec2-3-80-146-95.compute-1.amazonaws.com
-ssh -L localhost:8888:localhost:8888 -i "demo.pem" ubuntu@ec2-3-80-146-95.compute-1.amazonaws.com
+ssh -i  "demo.pem" ubuntu@ec2-3-83-163-22-109.compute-1.amazonaws.com
+ssh -L localhost:8888:localhost:8888 -i "demo.pem" ubuntu@ec2-3-83-163-22.compute-1.amazonaws.com
 sudo kill -9 $(sudo lsof -t -i:8888)
 ```
 ### share valume
@@ -23,7 +23,13 @@ https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-f
 python3.6 -m venv my_env
 source my_env/bin/activate
 pip install pip --upgrade
+```
 
+### install pip in mac os
+```
+python3 -m venv myvenv 
+source myvenv/bin/activate 
+pip install -r requirements.txt
 ```
 
 ### install spark in ubuntu
@@ -46,4 +52,5 @@ https://www.tensorflow.org/guide/distributed_training
 
 ### other
 ssh -L localhost:8888:localhost:8888 -i "demo.pem" ubuntu@ec2-54-165-122-67.compute-1.amazonaws.com
+
 
